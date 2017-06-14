@@ -1,0 +1,31 @@
+<#include "project_tabs.html" />
+
+<div class="row" >
+    
+        
+    
+		
+        
+            <#list project_list as project >
+				
+        
+			<div class="col-sm-3">
+				<div class="thumbnail">
+            <input type="hidden" id="id" name="id" />
+            
+		
+              
+              
+  
+                <a href="jsp/site/Portal.jsp?page=project&view=detailsProject&id=${project.id}" and ><img src="http://www.agefa.org/jeunes/wp-content/uploads/sites/3/2014/11/titre-projet.png" class="img-thumbnail" alt="Responsive image"></a>
+               <p>${project.name}<p>
+			   </div>
+			</div>
+        </#list>
+			
+    
+    
+</div>
+
+  
+  
