@@ -1,7 +1,7 @@
 <#include "manageproject_tabs.html" />
 <@tabs tab="project" />
-
-<@rowBoxHeader i18nTitleKey="example.create_project.title">
+<@row><@columns> <@boxHeader i18nTitleKey="example.create_project.title"/>
+<@boxBody>
     <form class="form-horizontal" method="post" name="create_project" action="jsp/admin/plugins/example/ManageProjects.jsp">
         <@messages errors=errors />
         <input type="hidden" id="id" name="id"/>
@@ -12,5 +12,8 @@
         <@fieldInputText i18nLabelKey="example.create_project.labelCout" inputName="cout" mandatory=true value="${project.cout!''}" i18nHelpBlockKey="example.create_project.labelCout.help" />
         <@actionButtons button1Name="action_createProject" button2Name="view_manageProjects"/>
     </form>
-</@rowBoxHeader>
+</@boxBody>
+</@columns>
+</@row>
+
 
