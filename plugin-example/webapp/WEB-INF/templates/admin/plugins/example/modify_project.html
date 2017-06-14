@@ -1,0 +1,15 @@
+<#include "manageproject_tabs.html" />
+<@tabs tab="project" />
+
+<@rowBoxHeader i18nTitleKey="example.modify_project.title">
+    <form class="form-horizontal" method="post" name="modify_project" action="jsp/admin/plugins/example/ManageProjects.jsp">
+        <@messages errors=errors />
+        <input type="hidden" id="id" name="id" value="${project.id}"/>
+        
+        <@fieldInputText i18nLabelKey="example.modify_project.labelName" inputName="name" mandatory=true value="${project.name}" i18nHelpBlockKey="example.modify_project.labelName.help" />
+        <@fieldInputText i18nLabelKey="example.modify_project.labelDescription" inputName="description" mandatory=true value="${project.description}" i18nHelpBlockKey="example.modify_project.labelDescription.help" />
+        <@fieldInputText i18nLabelKey="example.modify_project.labelImageUrl" inputName="image_url" mandatory=true value="${project.imageUrl}" i18nHelpBlockKey="example.modify_project.labelImageUrl.help" />
+        <@actionButtons button1Name="action_modifyProject" button2Name="view_manageProjects"/>
+    </form>
+</@rowBoxHeader>
+
