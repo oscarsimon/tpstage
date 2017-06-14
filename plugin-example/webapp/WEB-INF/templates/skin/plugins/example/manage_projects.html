@@ -17,7 +17,10 @@
               
               
   
-                <a href="jsp/site/Portal.jsp?page=project&view=detailsProject&id=${project.id}" and ><p>${projet.image_ur}</p></a>
+                <a href="jsp/site/Portal.jsp?page=project&view=detailsProject&id=${project.id}">
+                <img src=${project.imageUrl} class="img
+-thumbnail" alt="Responsive image">
+                </a>
                <p>${project.name}<p>
 			   </div>
 			</div>
